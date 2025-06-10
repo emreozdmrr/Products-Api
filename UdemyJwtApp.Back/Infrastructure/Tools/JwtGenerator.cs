@@ -28,7 +28,7 @@ namespace UdemyJwtApp.Back.Infrastructure.Tools
 			JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(
 				issuer: JwtDefaults.ValidIssuer, audience: JwtDefaults.ValidAudience,
 				claims: claims, notBefore: DateTime.UtcNow,
-				expires: DateTime.UtcNow.AddMinutes(JwtDefaults.Expire),
+				expires: DateTime.UtcNow.AddDays(JwtDefaults.Expire),
 				signingCredentials: credentials);
 
 			JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
